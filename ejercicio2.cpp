@@ -3,20 +3,20 @@ using namespace std;
 
 int main() {
     int numero;
-    cout << "Ingrese un numero: ";
+    int i = 1; // contador que empieza en 1
+
+    cout << "Ingrese un numero (del 1 al 100): ";
     cin >> numero;
 
-    // Verificar si el numero es menor a 10
-    if (numero < 10) {
-        cout << "Los numeros del 1 al " << numero << " son: 1 2 3 4 5 6 7 8 9" << endl;
-    }
-    // Verificar si el numero es menor a 30
-    else if (numero < 30) {
-        cout << "Los numeros del 1 al " << numero << " son: 1 2 3 ... hasta " << numero << endl;
-    }
-    // Si no se cumplen las condiciones anteriores
-    else {
-        cout << "El numero es muy grande, solo se permiten valores menores a 30" << endl;
+    if (numero >= 1 && numero <= 100) {
+        // Uso do...while para imprimir los numeros
+        do {
+            cout << i << " ";
+            i++;
+        } while (i <= numero);
+        cout << endl;
+    } else {
+        cout << "Error: el numero debe estar entre 1 y 100." << endl;
     }
 
     return 0;
